@@ -11,10 +11,10 @@ public class Prodotto {
     // Costruttori
     public Prodotto( String nome, String descrizione, double prezzo) {
         this.codice = codice;
-        this.nomeme = nome;
+        this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
-        this.iva = priceIva;
+        this.iva = prezzoIva;
     }
     //Getter e Setter
     public int getCodice() {
@@ -30,7 +30,7 @@ public class Prodotto {
         return prezzo;
     }
     public double getIva() {
-        double priceIva = price * 1.22;
+        double priceIva = prezzo * 1.22;
         return priceIva;
     }
     public void setNome(String nome) {
@@ -46,7 +46,8 @@ public class Prodotto {
         this.iva = iva;
     }
 
+    //Moduli
 
-
+    public double prezzoIva = prezzo * 1.22;
 
 }
