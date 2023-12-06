@@ -1,53 +1,54 @@
 package org.lessons.java.shop;
 
-public class Prodotto {
-    // Attributi
-    private int codice;
-    private String nome;
-    private String descrizione;
-    private double prezzo;
-    private double iva;
+import java.util.Random;
 
-    // Costruttori
-    public Prodotto( String nome, String descrizione, double prezzo) {
-        this.codice = codice;
-        this.nome = nome;
-        this.descrizione = descrizione;
-        this.prezzo = prezzo;
-        this.iva = prezzoIva;
+public class Prodotto {
+    //ATTRIBUTI
+    private int code;
+    private String name;
+    private String description;
+    private double price;
+    private double iva;
+    //COSTRUTTORI
+    public Prodotto( String name, String description, double price) {
+        Random randomCode = new Random();
+        this.code = randomCode.nextInt(1, 10001);
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.iva = priceIva;
     }
-    //Getter e Setter
-    public int getCodice() {
-        return codice;
+    //GET AND SET
+    public int getCode() {
+        return code;
     }
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
-    public String getDescrizione() {
-        return descrizione;
+    public String getDescription() {
+        return description;
     }
-    public double getPrezzo() {
-        return prezzo;
+    public double getPrice() {
+        return price;
     }
     public double getIva() {
-        double priceIva = prezzo * 1.22;
+        double priceIva = price * 1.22;
         return priceIva;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
+    public void setDescription(String description) {
+        this.description = description;
     }
-    public void setPrezzo(double prezzo) {
-        this.prezzo = prezzo;
+    public void setPrice(double price) {
+        this.price = price;
     }
     public void setIva(double iva) {
         this.iva = iva;
     }
-
-    //Moduli
-
-    public double prezzoIva = prezzo * 1.22;
-
+    //MODULI
+    Random randomCodice = new Random();
+    public int codiceProdotto = randomCodice.nextInt(1000000,99999999);
+    public double priceIva = price * 1.22;
 }
